@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ui:composition template="./template1.xhtml">
+        <ui:define name="top">
+            <h2>Daily Notes</h2>
+        </ui:define>
+
+        <ui:define name="content">
+            <h:form>
+                <h:panelGrid columns="2" styleClass="centered1" style="height: 424px">
+                    <p:commandButton value="Login" ajax="false"/>
+                    <p:commandButton id="Cadastrar" value="#{bundle.Create}" actionListener="#{customerController.prepareCreate}" oncomplete="PF('CustomerCreateDialog').show()"/>
+                </h:panelGrid>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
